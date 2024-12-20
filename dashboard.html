@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - SolarMetrics</title>
+    <link rel="stylesheet" href="estilos/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Menu Lateral -->
+    <aside class="sidebar" id="sidebar">
+        <!-- Espaço do Usuário -->
+        <div class="user-info">
+            <img src="imagens/rafael.png" alt="Avatar do Usuário" class="user-avatar" title="imagem avatar do usuario">
+            <div class="user-details">
+                <h3>Rafael Nonato</h3>
+                <p>Residencial</p>
+            </div>
+            <a href="index.html">
+                <button class="logout-btn">
+                    <img src="imagens/logout.png" alt="Logout" title="botão Sair">
+                </button>
+            </a>
+        </div>
+
+        <!-- Botões do Menu -->
+        <nav class="menu">
+            <a href="#" class="menu-item" id="overview">
+                <img src="imagens/icone_overview-branco.png" alt="Overview Icon" class="icon" data-default-icon="imagens/icone_overview-branco.png" data-active-icon="imagens/icone_overview-preto.png">Overview
+            </a>
+            <a href="#" class="menu-item" id="notifications">
+                <img src="imagens/icone_notification-branco.png" alt="Overview Icon" class="icon" data-default-icon="imagens/icone_notification-branco.png" data-active-icon="imagens/icone_notification-preto.png">Notificações
+            </a>
+            <a href="#" class="menu-item" id="settings">
+                <img src="imagens/icone_settings-branco.png" alt="Overview Icon" class="icon" data-default-icon="imagens/icone_settings-branco.png" data-active-icon="imagens/icone_settings-preto.png">Configurações
+            </a>
+        </nav>
+
+        <!-- Logo na parte inferior -->
+        <div class="sidebar-footer">
+            <img src="imagens/logo_SolarMetricsBranca.png" alt="SolarMetrics Logo" class="footer-logo">
+        </div>
+    </aside>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <button id="menu-toggle" class="menu-toggle">
+            <img id="menu-open-icon" src="imagens/icone_lateral-aberto.png" alt="Menu Aberto" style="display: block;">
+            <img id="menu-close-icon" src="imagens/icone_lateral-fechado.png" alt="Menu Fechado" style="display: none;">
+        </button>
+        <main class="dashboard-main" id="mainContent">
+            <!-- Cartões Superiores -->
+            <section class="dashboard-top">
+                <div class="card">
+                    <h3>Instalação</h3>
+                    <div class="switch-container">
+                        <p>Medir Consumo</p>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="switch-container">
+                        <p>Medir Geração</p>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="switch-container">
+                        <p>Desligar Sistema</p>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="card-tempo">
+                        <img src="imagens/cloud-icon.png" alt="Clima" title="Clima">
+                            <h3>São Paulo</h3>
+                            <p>17°C</p>
+                </div>
+                <div class="card-economia">
+                    <img src="imagens/savings-icon.png" alt="Economia" title="Economia">
+                    <div class="texto-economia">
+                        <h3>Economia no mês</h3>
+                        <p>R$ 45,00</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gráficos -->
+            <section class="dashboard-charts">
+                <div class="info-card">
+                    <div class="titulo-grafico">
+                        <p>Medição em tempo real</p>
+                    </div>
+                    <div class="grafico">
+                        <canvas id="realTimeChart"></canvas>
+                    </div>
+                    
+                </div>
+                <div class="info-card-porcentagem">
+                    <div class="gauge-container">
+                        <canvas id="gaugeChart"></canvas>
+                        <div id="gaugePercentage" class="gauge-text">0%</div>
+                    </div>
+                    <p class="chart-label">Aproveitamento do Sistema</p>
+                </div>
+            </section>
+
+            <!-- Geração -->
+            <section class="dashboard-generation">
+                <div class="linha-divisao">
+                    <div class="generation-card">
+                        <h4>Geração do dia</h4>
+                        <h1>45,20 <span class="unidade">KW/h</span></h1>
+                    </div>
+                </div>
+                <div class="linha-divisao">
+                    <div class="generation-card">
+                        <h4>Geração da semana</h4>
+                        <h1>87,40 <span class="unidade">KW/h</span></h1>
+                    </div>
+                </div>
+                <div class="generation-card">
+                    <h4>Geração do mês</h4>
+                    <h1>87,40 <span class="unidade">KW/h</span></h1>
+                </div>
+            </section>
+        </main>
+
+        <section class="dashboard-settings" id="settingsSection">
+            <div class="configButtons">
+                <h2>Menu de Configurações</h2>
+            </div>
+            <div class="settings-card">
+                <!-- Formulário -->
+                <div class="settings-form">
+                    <form id="userProfileForm">
+                        <h3>Perfil do Usuário</h3>
+                        <label for="userName">Nome:</label>
+                        <input type="text" id="userName" name="userName" value="Rafael Nonato">
+
+                        <label for="userEmail">Email:</label>
+                        <input type="email" id="userEmail" name="userEmail" value="Rafael.Nonato@gmail.com">
+
+                        <div class="half-input">
+                            <label for="userPhone">Celular:</label>
+                            <input type="tel" id="userPhone" name="userPhone" value="11 94032-8732">
+                        </div>
+                        <div class="half-input">
+                            <label for="userLandline">Telefone Fixo:</label>
+                            <input type="tel" id="userLandline" name="userLandline" value="11 5021-8732">
+                        </div>
+                    </form>
+
+                    <form id="installationForm">
+                        <h3>Instalação</h3>
+                        <div class="formBox">
+                            <div class="half-input">
+                                <label for="installationType">Tipo de instalação:</label>
+                                <select id="installationType" name="installationType">
+                                    <option value="Residencial" selected>Residencial</option>
+                                    <option value="Comercial">Comercial</option>
+                                </select>
+                            </div>
+                            <div class="half-input">
+                                <label for="installationCEP">CEP da instalação:</label>
+                                <input type="text" id="installationCEP" name="installationCEP" value="01536-000">
+                            </div>
+                            <div class="half-input">
+                                <label for="panelsQuantity">Qtd painéis solares:</label>
+                                <input type="number" id="panelsQuantity" name="panelsQuantity" value="20">
+                            </div>
+                            <div class="half-input">
+                                <label for="panelPower">Potência dos painéis:</label>
+                                <input type="number" id="panelPower" name="panelPower" value="320">
+                            </div>
+                            <div class="full-input">
+                                <label for="installationAddress">Logradouro:</label>
+                                <input type="text" id="installationAddress" name="installationAddress"
+                                    value="Av. Lacerda Franco, 762">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Foto do perfil -->
+                <div class="profile-photo">
+                    <img src="imagens/rafael.png" alt="Foto de perfil">
+                    <div class="profile-photo-buttons">
+                        <button type="button" id="uploadPhotoButton">Enviar Foto</button>
+                        <button type="button" id="removePhotoButton">Remover Foto</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nova seção de Alertas -->
+        <section class="dashboard-alerts" id="alertsSection">
+            <div class="alerts-header">
+                <h2>Notificações</h2>
+                <div class="tab-container">
+                    <button class="tab active" id="allTab">Todos</button>
+                    <button class="tab" id="unreadTab">Não lidos</button>
+                </div>
+            </div>
+            <div class="alerts-content">
+                <div class="alert">
+                    <div class="alert-info">
+                        <h3>Instalação Residencial</h3>
+                        <p>A produção foi afetada devido às condições climáticas desfavoráveis.</p>
+                    </div>
+                    <span class="alert-date">5 de Novembro</span>
+                </div>
+                <div class="alert unread">
+                    <div class="alert-info">
+                        <h3>Instalação Residencial</h3>
+                        <p>Parabéns! No mês passado, você economizou R$200 na sua conta de energia.</p>
+                    </div>
+                    <span class="alert-date">Mês passado</span>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="scripts/dashboard.js"></script>
+</body>
+
+</html>

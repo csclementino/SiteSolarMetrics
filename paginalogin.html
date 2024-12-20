@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarMetrics - Home</title>
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <div class="background-carousel">
+        <div class="carousel-slide" style="background-image: url('imagens/banner_8.jpg');"></div>
+        <div class="carousel-slide" style="background-image: url('imagens/banner_7.jpg');"></div>
+        <div class="carousel-slide" style="background-image: url('imagens/banner_6.jpg');"></div>
+        <div class="carousel-slide" style="background-image: url('imagens/banner_9.png');"></div>
+    </div>
+</head>
+
+<body>
+    <!-- Header fixo no topo da página -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo">
+                <a href="index.html"><img src="imagens/logo_SolarMetricsBranca.png" alt="Logo SolarMetrics"
+                        title="Botão Voltar para Home"></a>
+            </div>
+            <a href="paginalogin.html"><button class="login-button">Fazer login</button></a>
+        </div>
+        <div class="header-bottom">
+            <nav class="nav">
+                <a href="sobre.html">Sobre</a>
+                <hr class="custom-hr">
+                <a href="desenvolvedores.html">Desenvolvedores</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner com título centralizado -->
+    <section class="banner">
+        <section class="loginpage">
+            <div class="caixabotoeslogin">
+                <div id="loginTab" class="botaologin ativo">Login</div>
+                <div id="cadastroTab" class="botaologin">Cadastro</div>
+            </div>
+            <form id="loginForm" class="credenciais ativo">
+                <h2>Insira suas <span>credenciais</span></h2>
+                <div class="titulocaixalogin">
+                    <label for="uname">Nome</label>
+                    <input type="text" id="uname" placeholder="Seu Login" name="uname" required>
+                </div>
+                <div class="titulocaixalogin">
+                    <label for="psw">Senha</label>
+                    <input type="password" id="psw" placeholder="Sua Senha" name="psw" required>
+                </div>
+                <div class="botaolembrardados">
+                    <input type="checkbox" id="remember-checkbox">
+                    <label for="remember-checkbox">Lembrar dados? Não recomendado para computadores públicos.</label>
+                </div>
+                <a href="dashboard.html">
+                    <button type="button">Entrar</button>
+                </a>
+            </form>
+            <form id="cadastroForm" class="formulario">
+                <h2>Criar uma <span>conta</span></h2>
+                <div class="titulocaixalogin">
+                    <label for="nomeCadastro">Nome</label>
+                    <input type="text" id="nomeCadastro" placeholder="Seu Nome" name="nomeCadastro" required>
+                </div>
+                <div class="titulocaixalogin">
+                    <label for="emailCadastro">Email</label>
+                    <input type="email" id="emailCadastro" placeholder="Seu Email" name="emailCadastro" required>
+                </div>
+                <div class="titulocaixalogin">
+                    <label for="senhaCadastro">Senha</label>
+                    <input type="password" id="senhaCadastro" placeholder="Sua Senha" name="senhaCadastro" required>
+                </div>
+                <button type="button">Cadastrar</button>
+            </form>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="texto-logo">
+            <img id="logo-arc" src="imagens/logo_texto_amarelo.png" alt="Logo ARC" title="Logo ARC">
+            <p id="copyright">© Todos os direitos reservados</p>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/company/105408401/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BVM5xlup5RA2%2Fp2aMNQVgXA%3D%3D"
+                target="_blank"><img id="social" src="imagens/iconein.png" alt="LinkedIn" title="Página LinkedIn"></a>
+            <a href="https://github.com/ARC-ceo/SolarMetrics" target="_blank"><img id="social"
+                    src="imagens/iconegithub.png" alt="GitHub" title="Página GitHub"></a>
+            <a href="https://www.youtube.com/@GrupoARC-c6z" target="_blank"><img id="social" src="imagens/iconeig.png"
+                    alt="Youtube" title="Página Youtube"></a>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

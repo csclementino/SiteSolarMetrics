@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarMetrics - Home</title>
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <div class="background-carousel">
+        <div class="carousel-slide" style="background-image: url('imagens/banner_8.jpg');"></div>
+        <div class="carousel-slide" style="background-image: url('imagens/banner_7.jpg');"></div>
+        <div class="carousel-slide" style="background-image: url('imagens/banner_6.jpg');"></div>
+        <div class="carousel-slide" style="background-image: url('imagens/banner_9.png');"></div>
+    </div>
+</head>
+
+<body>
+    <!-- Header fixo no topo da página -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo">
+                <a href="index.html" target="_blank"><img src="imagens/logo_SolarMetricsBranca.png"
+                        alt="Logo SolarMetrics" title="Botão Voltar para Home"></a>
+            </div>
+            <a href="paginalogin.html"><button class="login-button">Fazer login</button></a>
+        </div>
+        <div class="header-bottom">
+            <nav class="nav">
+                <a href="sobre.html">Sobre</a>
+                <hr class="custom-hr">
+                <a href="desenvolvedores.html">Desenvolvedores</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner com imagem de fundo -->
+    <section class="banner">
+        <h1 class="banner-title">Junte-se a&nbsp;<span>SolarMetrics</span>, e venha monitorar seu sistema solar</h1>
+    </section>
+
+    <section class="servicos">
+        <div class="servicos-header">
+            <h2>Serviços</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="container-servicos">
+            <div class="caixa-servicos">
+                <img src="imagens/imgsobre1.png" alt="Imagem do serviço 1">
+                <h4>Automatize seu Sistema Solar</h4>
+                <p>Nossas soluções permitem que você acompanhe o desempenho da sua instalação em tempo real, diretamente
+                    do seu dispositivo.</p>
+            </div>
+            <div class="caixa-servicos">
+                <img src="imagens/imgsobre2.png" alt="Imagem do serviço 2">
+                <h4>Monitoramento em Tempo Real</h4>
+                <p>Aproveite ao máximo seu sistema solar. Automatize o monitoramento e mantenha
+                    seu telhado sustentável com tecnologia de ponta.</p>
+            </div>
+            <div class="caixa-servicos">
+                <img src="imagens/imgsobre3.png" alt="Imagem do serviço 3">
+                <h4>Economize e Lucre com Energia Solar</h4>
+                <p>Veja o lucro gerado pela sua instalação solar e acompanhe quanto você economiza mensalmente.</p>
+            </div>
+            <div class="caixa-saiba-mais">
+                <a href="sobre.html"><button class="saiba-mais">SAIBA MAIS</button></a>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="faq-title">
+            <img src="imagens/iconefaq.png" alt="Ícone FAQ" title="Ícone FAQ">
+            <h2>Perguntas <span class="span-perguntas">Frequentes</span></h2>
+        </div>
+
+        <div class="faq-item" onclick="toggleAnswer(0)">
+            <div class="faq-question" style="font-weight: bold;">
+                Como funciona o SolarMetrics?
+                <span class="toggle-symbol">+</span>
+            </div>
+            <div class="faq-answer" id="answer-0">
+                O Solar Metrics permite que você monitore sua instalação de energia solar em tempo real. Por meio de sensores instalados no sistema, os dados de produção de energia, consumo e eficiência são enviados para o nosso dashboard, onde você pode acompanhar todos os detalhes do desempenho da sua instalação.
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleAnswer(1)">
+            <div class="faq-question" style="font-weight: bold;">
+                É possível ver quanto estou economizando com energia solar?
+                <span class="toggle-symbol">+</span>
+            </div>
+            <div class="faq-answer" id="answer-1">
+                Infelizmente, ainda não temos um aplicativo dedicado para dispositivos móveis. No entanto, você pode consultar suas informações e receber atualizações diretamente pelo WhatsApp por meio do nosso assistente virtual.
+            </div>
+        </div>
+        
+
+        <div class="faq-item" onclick="toggleAnswer(2)">
+            <div class="faq-question" style="font-weight: bold;">
+                Posso acessar o SolarMetrics em dispositivos móveis?
+                <span class="toggle-symbol">+</span>
+            </div>
+            <div class="faq-answer" id="answer-2">
+                Sim! O Solar Metrics calcula automaticamente o valor estimado economizado com base na produção de
+                energia e na tarifa local de eletricidade, permitindo que você visualize quanto está economizando ao
+                utilizar energia solar.
+            </div>
+        </div>
+
+        <div class="faq-item"onclick="toggleAnswer(3)">
+            <div class="faq-question"  style="font-weight: bold;">
+                Como posso verificar o histórico de produção de energia?
+                <span class="toggle-symbol">+</span>
+            </div>
+            <div class="faq-answer" id="answer-3">
+                Você pode acessar o histórico de produção de energia diretamente no dashboard do SolarMetrics. Lá, os dados coletados pelos sensores IoT são armazenados e exibidos em gráficos interativos. Esses gráficos permitem que você visualize a produção de energia por dia, semana e mês.
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleAnswer(4)">
+            <div class="faq-question" style="font-weight: bold;">
+                A instalação dos sensores é demorada?
+                <span class="toggle-symbol">+</span>
+            </div>
+            <div class="faq-answer" id="answer-4">
+                Não, a instalação dos sensores é rápida e geralmente leva de 1 a 2 horas. Nossa equipe técnica chega até sua residência ou empresa, realiza a instalação dos sensores IoT no seu sistema solar e os conecta à rede. Após a instalação, os sensores começam a enviar dados para o dashboard, permitindo que você monitore a produção de energia em tempo real.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="texto-logo">
+            <img id="logo-arc" src="imagens/logo_texto_amarelo.png" alt="Logo ARC" title="Logo ARC">
+            <p id="copyright">© Todos os direitos reservados</p>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/company/105408401/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BVM5xlup5RA2%2Fp2aMNQVgXA%3D%3D" target="_blank"><img id="social" src="imagens/iconein.png" alt="LinkedIn"
+                    title="Página LinkedIn"></a>
+            <a href="https://github.com/ARC-ceo/SolarMetrics" target="_blank"><img id="social" src= "imagens/iconegithub.png" alt="GitHub"
+                    title="Página GitHub"></a>
+            <a href="https://www.youtube.com/@GrupoARC-c6z" target="_blank"><img id="social" src="imagens/iconeig.png" alt="Youtube"
+                    title="Página Youtube"></a>
+        </div>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1434 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    background-color: #1C1C1C;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+
+/* Layout principal */
+.dashboard-container {
+    margin-left: 270px; /* Reserva espaço para a sidebar */
+    padding: 90px;
+    padding-top: 30px;
+}
+
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    background-color: #343333;
+    box-shadow: 20px 13px 4px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%); /* Move a sidebar para fora da tela */
+}
+
+
+.sidebar h2 {
+    margin-top:40px;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Cabeçalho do Menu */
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Ajuste do menu */
+.menu {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: fixed;
+    margin: 0;
+    left: 2%;
+    top: 4%;
+    z-index: 1100;
+    cursor: pointer;
+    outline: transparent;
+}
+
+.menu.open {
+    transform: translateX(0);
+}
+
+.menu-item {
+    display: flex;                    /* Usado para criar um layout flexível */
+    align-items: center;              /* Alinha os itens verticalmente no centro */
+    justify-content: flex-start;      /* Alinha os itens no início (à esquerda) */
+    text-decoration: none;
+    font-family: 'DejaRip';
+    font-style: bold;
+    font-weight: 400;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    gap: 10px;
+
+}
+
+.menu-item.ativo {
+    background-color: #e1e417;
+    box-shadow: 10px 11px 4px rgba(0, 0, 0, 0.25);
+    color: #111;
+}
+
+.icon {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 35px; /* Largura do ícone */
+    height: 35px; /* Altura do ícone */
+    align-items: center;
+}
+
+/* Estilo para o rodapé da sidebar */
+.sidebar-footer {
+    position: absolute;
+    bottom: 40px; /* Espaçamento inferior */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para manter centralizado */
+    text-align: center;
+    width: 100%; /* Ocupa toda a largura para melhor responsividade */
+}
+
+.sidebar-footer img {
+    max-width: 150px; /* Largura máxima da logo */
+    align-items: center;
+    height: auto;
+    opacity: 45%; /* Suaviza a logo visualmente */
+    transition: opacity 0.3s ease; /* Adiciona efeito ao hover */
+    margin-bottom: 25px;
+}
+
+.sidebar-footer img:hover {
+    opacity: 1; /* Opacidade total ao passar o mouse */
+}
+
+/* Espaço do Usuário */
+.user-info {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    filter: drop-shadow(8px 10px 4px rgba(0, 0, 0, 0.25));
+}
+
+.user-details {
+    font-family: 'DejaRip';
+    font-style: bold;
+    flex-grow: 1;
+    color: #fff;
+    margin-left: 15px;
+}
+
+.user-details h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.user-details p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.logout-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.logout-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Cartões Superiores */
+.dashboard-top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin-bottom: 25px;
+}
+
+.card {
+    flex: 1;
+    background-color: #343333;
+    border-radius: 16px;
+    padding-top: 5px; 
+    padding-left: 40px; 
+    padding-right: 40px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 14px 11px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card-tempo {
+    flex: 1;
+    background-color: #343333;
+    border-radius: 16px;
+    padding-top: 15%; 
+    padding-left: 40px; 
+    padding-right: 40px;
+    box-shadow: 14px 11px 4px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    text-align: center;
+    font-family: 'DejaRip';
+    font-style: bold;
+}
+
+.card-tempo img{
+    max-width: 120px;
+    padding-bottom: 20px;
+}
+
+.card-tempo h3{
+    font-size: 14px;
+    font-style: normal;
+}
+
+.card-tempo p{
+    font-size: 40px;
+    margin: -16px;
+}
+
+.texto-economia{
+    text-align: center;
+}
+
+.texto-economia h3{
+    font-size: 25px;
+}
+
+.texto-economia p{
+    font-size: 27px;
+    margin: -5%;
+}
+
+.card-economia {
+    flex: 1;
+    background-color: #343333;
+    border-radius: 16px;
+    padding-top: 5px; 
+    padding-left: 40px; 
+    padding-right: 40px;
+    box-shadow: 14px 11px 4px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    text-align: center;
+    font-family: 'DejaRip';
+    font-style: bold;
+}
+
+.card-economia img{
+    padding-top: 20px;
+    max-width: 90px;
+}
+
+.card h3 {
+    font-family: 'LFT Etica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.card img {
+    max-width: 60px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    margin: 0;
+    color: #ccc;
+}
+
+/* Botões de Consumo */
+.toggle-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 15px;
+    background-color: #e1e417;
+    color: #111;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    background-color: #c7c700;
+    color: #fff;
+}
+
+/* Gráficos */
+.dashboard-charts {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Primeiro item ocupa 3/4 e o segundo 1/4 */
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.dashboard-charts > * {
+    height: 260px; /* Altura fixa */
+    overflow: hidden; /* Impede que o conteúdo quebre o layout */
+}
+
+.titulo-grafico{
+    align-items: center;
+    justify-items: center;
+}
+
+.chart {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.chart img {
+    max-width: 100%;
+    height: auto;
+}
+
+.chart h3 {
+    position: absolute;
+    background-color: #e1e417;
+    border: 1px yellow;
+    border-radius: 10px;
+    padding: 40px 15px 30px 15px;
+    line-height: 30px;
+    left: 30px;
+    width: 80px;
+    font-size: 1.2rem;
+    color:black;
+}
+
+/* Gráfico 80 */
+.chart-80 {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+.chart-80 h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.chart-80 img{
+    max-width: 40%;
+}
+
+/* Geração */
+.dashboard-generation {
+    background-color: #343333;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    box-shadow: 14px 11px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.unidade {
+    color: yellow;
+}
+
+.generation-card h4 {
+    font-family: 'DejaRip';
+    font-style: bold;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.generation-card h1 {
+    font-family: 'DejaRip';
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0%;
+}
+
+.linha-divisao{
+    position: relative; /* Necessário para posicionar o pseudo-elemento */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.linha-divisao::after{
+    content: ""; /* Cria um elemento visual */
+    position: absolute;
+    top: 20%; /* Define a posição inicial da borda */
+    right: 0; /* Alinha na borda direita */
+    width: 1.5px; /* Largura da borda */
+    height: 60%; /* Define a altura da borda como uma porcentagem */
+    background-color: rgb(255, 255, 255); /* Cor da borda */
+}
+
+.generation-card p {
+    text-align: center;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Estilo do container dos switches */
+.switch-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Garante que texto e switch fiquem nos extremos */
+    margin: 10px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #333; /* Opcional para separar as linhas */
+}
+
+/* Texto à esquerda */
+.switch-container p {
+    margin: 0;
+    font-size: 16px;
+    color: #fff;
+    flex-grow: 1; /* Ocupa o espaço à esquerda */
+    text-align: left;
+}
+
+
+/* Estilo do switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px; /* Ajuste de largura */
+    height: 30px; /* Aumentando a altura */
+    flex-shrink: 0; /* Garante que o switch mantenha seu tamanho */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Estilo do slider (parte visível do botão) */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    border-radius: 30px; /* Bordas arredondadas ajustadas para a altura maior */
+    transition: 0.4s;
+}
+
+/* Estilo da bolinha (circle) */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px; /* Bolinha ajustada para maior altura */
+    width: 20px;  /* Bolinha ajustada para maior altura */
+    left: 4.4px;    /* Ajuste para posicionar a bolinha corretamente */
+    bottom: 4.4px;  /* Ajuste para posicionar a bolinha corretamente */
+    background-color: #ffffff; /* Cor inicial da bolinha (desligada) */
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+/* Quando o switch está ligado (checked), muda a cor da bolinha para amarela */
+.switch input:checked + .slider:before {
+    background-color: #e1e417; /* Bolinha amarela quando o switch está ligado */
+    transform: translateX(20px); /* Move a bolinha para a direita */
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px); /* Movimenta a "bolinha" para a direita */
+}
+
+.chart-container {
+    max-width: 600px; /* Largura máxima do gráfico */
+    height: 350px; /* Altura máxima */
+    margin: 0 auto; /* Centraliza o gráfico horizontalmente */
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 14px 11px 4px rgba(0, 0, 0, 0.25);
+}
+
+.chart-wrapper {
+    width: 100%;
+    height: 80%;
+    position: relative; /* Garante que o canvas respeite os limites */
+}
+
+/* Estilo para os gráficos */
+.info-card {
+    display: grid;
+    grid-template-columns: 10% 90%; /* Primeira coluna 10% e a segunda 90% */
+    gap: 20px; /* Espaçamento entre as colunas */
+    box-shadow: 14px 11px 4px rgba(0, 0, 0, 0.25);
+    height: 100%;
+    align-items: center;
+    padding-right: 15px;
+    border-radius: 16px;
+    border: 1px solid #e1e417;
+}
+
+.titulo-grafico{
+    margin-left: 20px;
+    text-align: center;
+    justify-content: center;
+    font-family: 'DejaRip';
+    font-style: bold;
+    font-weight: 400;
+    font-size: 19px;
+    color: #acacac;
+}
+
+
+
+.info-card-porcentagem{
+    flex: 1;
+    background-color: #343333;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 14px 11px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+#realTimeChart {
+    margin-top: 20px; /* Adiciona margem superior específica */
+}
+
+/* Configurações específicas do canvas */
+canvas {
+    width: 100% !important; /* Garante que o canvas ocupe toda a largura */
+    height: 100% !important; /* Garante que o canvas ocupe toda a altura */
+}
+
+.gauge-container {
+    position: relative;
+    flex-direction: column;
+    height: 70%;
+    top: 50%; /* Posiciona no meio vertical da tela */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gauge-text {
+    position: absolute;
+    bottom: 40px; /* Distância da parte inferior */
+    left: 50%; /* Alinha no centro horizontal */
+    transform: translateX(-50%); /* Ajusta o centro exato */
+    font-size: 20px;
+    color: #333; /* Cor do texto */
+    font-family: Arial, sans-serif;
+}
+
+#gaugeChart {
+    transform: rotate(0deg); /* Exibe um círculo completo */
+    height: 100%; /* Ajusta altura para o contêiner */
+    width: 100%; /* Ajusta largura para o contêiner */
+    margin-bottom: 40px;
+}
+
+.gauge-text {
+    position: absolute;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+}
+.gauge-label {
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.chart-label {
+    position: absolute;
+    bottom: 10px; /* Distância da parte inferior */
+    left: 50%; /* Alinha no centro horizontal */
+    transform: translateX(-50%); /* Ajusta o centro exato */
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Dashboard Settings */
+.dashboard-settings {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Ajuste do layout principal */
+.settings-card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Linhas abaixo de Usuário e Instalação */
+.settings-card h3 {
+    font-size: 1.5rem;
+    color: #e1e417;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+}
+
+/* Inputs e labels no formulário */
+.settings-form label {
+    display: block;
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.settings-form input,
+.settings-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    background-color: #1f1f1f;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.settings-form input:focus,
+.settings-form select:focus {
+    outline: none;
+    border-color: #e1e417;
+    box-shadow: 0 0 5px #e1e417;
+}
+
+/* Estilo dos inputs e selects */
+.settings-card input[type="text"],
+.settings-card input[type="email"],
+.settings-card input[type="tel"],
+.settings-card input[type="number"],
+.settings-card select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.settings-card input:focus,
+.settings-card select:focus {
+    outline: none;
+    border-color: #e1e417;
+    box-shadow: 0 0 5px #e1e417;
+}
+
+/* Botões Enviar e Remover Foto */
+.settings-card button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #111;
+    background-color: #e1e417;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.settings-card button:hover {
+    background-color: #c7c700;
+    color: #fff;
+}
+
+.return-button:hover {
+    background-color: #c7c700;
+    color: #fff;
+}
+
+/* Layout para inputs menores */
+.half-input {
+    width: 48%;
+    display: inline-block;
+    margin-right: 4%;
+}
+
+.half-input:last-child {
+    margin-right: 0;
+}
+
+/* Estilo do Logradouro */
+.full-input {
+    width: 100%;
+    display: block;
+}
+
+/* Oculta seções não ativas */
+.dashboard-main,
+.dashboard-settings {
+    display: none;
+}
+
+.dashboard-main.active,
+.dashboard-settings.active {
+    display: block;
+}
+
+/* Botão de remover foto */
+#removePhotoButton {
+    display: inline-block;
+    background-color: #e1e417;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#removePhotoButton:hover {
+    background-color: #c7c700;
+    color: #fff;
+}
+
+/* Foto do perfil */
+.profile-photo {
+    flex: 0;
+    margin-left: 80px;
+    text-align: center;
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Caixa para botões de foto */
+.profile-photo-buttons {
+    margin-top: 10px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.profile-photo-buttons button {
+    display: block;
+    margin: 5px auto;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #111;
+    background-color: #e1e417;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-photo-buttons button:hover {
+    background-color: #c7c700;
+    color: #fff;
+}
+
+/* Estilo para Foto de Perfil */
+.profile-photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: span 2;
+}
+
+.profile-photo-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    margin-bottom: 10px;
+}
+
+.profile-photo-container label {
+    cursor: pointer;
+    color: #e1e417;
+    font-size: 1rem;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
+.profile-photo label:hover {
+    text-decoration: underline;
+}
+
+/* Alinhamento dos campos lado a lado */
+.settings-form .half-input {
+    display: inline-block;
+    width: 48%;
+    margin-right: 2%;
+}
+
+.settings-form .half-input:last-child {
+    margin-right: 0;
+}
+
+.settings-card form .full-input {
+    grid-column: span 2;
+}
+
+/* Campo de logradouro */
+.settings-form .full-input {
+    width: 100%;
+}
+
+/* Layout de instalação */
+#installationForm{
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.upBox{
+    justify-content: space-between;
+}
+
+.formBox{
+    display: grid;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#installationForm .half-input {
+    width: 100%;
+}
+
+#installationForm .full-input {
+    grid-column: span 2;
+}
+
+/* Botão de navegação ativa no menu */
+.menu-item {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-item.ativo {
+    background-color: #e1e417;
+    color: #111;
+}
+
+.configButtons{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Estilo da nova seção de Alertas */
+.dashboard-alerts {
+    display: none; /* Inicialmente escondido */    
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.dashboard-alerts.active {
+    display: block;
+    flex-shrink: 0;
+}
+
+.alerts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.alerts-header h2 {
+    font-size: 1.5rem;
+    color: #e1e417;
+}
+
+.tab-container {
+    display: flex;
+    gap: 10px;
+}
+
+.tab {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.tab.active {
+    background-color: #e1e417;
+    color: #111;
+}
+
+.tab:hover {
+    background-color: #555;
+}
+
+.alerts-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.alert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(255, 0, 0, 0.603);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.alert.unread {
+    background-color: green;
+    color: #111;
+}
+
+.alert-info h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+}
+
+.alert-info p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.alert-date {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+@media (max-width: 1920px){
+    .dashboard-alerts.active {
+        display: block;
+        width: 75vw;
+        height: 80vh;
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width: 1500px){
+    .dashboard-alerts.active {
+        display: block;
+        width: 75vw;
+        height: 80vh;
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width: 1100px){
+    .dashboard-alerts.active {
+        display: block;
+        width: 60vw;
+        height: 80vh;
+        flex-shrink: 0;
+    }
+}
+
+
+/* Ajustes para telas médias (768px) */
+@media (max-width: 768px) {
+    .body{
+        overflow-x: hidden;
+    }
+
+    .dashboard-container {
+        padding: 15px;
+        margin-left: 150px;
+    }
+    
+    .dashboard-charts {
+        grid-template-columns: 1fr; /* Um gráfico por linha */
+        gap: 15px;
+    }
+
+    .info-card {
+        padding: 15px; /* Reduz o padding */
+    }
+
+    canvas {
+        max-width: 50px; /* Garante que o gráfico não ultrapasse a largura do container */
+        height: auto; /* Ajusta a altura dinamicamente */
+    }
+
+    .sidebar {
+        width: 120px;
+    }
+
+    .user-info h3{
+        font-size: 12px;
+    }
+
+    .user-info p{
+        font-size: 8px;
+    }
+
+    .footer-logo{
+        width: 80px;
+        margin-bottom: 20px;
+    }
+
+    .dashboard-top,
+    .dashboard-charts,
+    .dashboard-generation {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 360px;
+    }
+
+    .menu {
+        gap: 5px;
+    }
+
+    .menu-item{
+        width: 50%;
+        font-size: 8px;
+    }
+
+    .card,
+    .info-card,
+    .generation-card {
+        width: 100%;
+    }
+
+    .dashboard-alerts.active {
+        display: block;
+        width: 68vw;
+        height: 90%;
+        flex-shrink: 0;
+    }
+
+    .alerts-header h2{
+        font-size: 12px;
+    }
+
+    .alert-info p{
+        font-size: 8px;
+    }
+
+    .alert-info h3{
+        font-size: 8px;
+    }
+
+    .alert-date{
+        font-size: 6px;
+    }
+
+    .tab{
+        font-size: 8px;
+    }
+
+    .dashboard-charts {
+        grid-template-columns: 1fr; /* Um gráfico por linha */
+        gap: 15px;
+    }
+
+    .info-card {
+        padding: 15px; /* Reduz o padding */
+    }
+
+    canvas {
+        max-width: 100%; /* Garante que o gráfico não ultrapasse a largura do container */
+        height: auto; /* Ajusta a altura dinamicamente */
+    }
+}
+
+/* Ajustes para telas pequenas (600px) */
+@media (max-width: 600px) {
+    *{
+        overflow-x: hidden;
+    }
+
+    .dashboard-container {
+        padding: 10px;
+        margin-left: 20px;
+    }
+
+    .sidebar {
+        width: 30%;
+        height: auto;
+        position: relative;
+    }
+
+    .footer-logo{
+        width: 100px;
+        position: relative;
+    }
+
+    .menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .dashboard-top,
+    .dashboard-charts,
+    .dashboard-generation {
+        grid-template-columns: 1fr;
+    }
+
+    .card,
+    .info-card,
+    .generation-card {
+        margin-bottom: 15px;
+        max-width: 250px;
+    }
+
+    .gaugeChart{
+        width: auto;
+        height: auto;
+    }
+
+    .dashboard-alerts.active {
+        display: block;
+        width: 250px;
+    }
+
+    .alerts-header h2{
+        font-size: 12px;
+    }
+
+    .alert-info p{
+        font-size: 8px;
+    }
+
+    .alert-info h3{
+        font-size: 8px;
+    }
+
+    .alert-date{
+        font-size: 6px;
+    }
+
+    .tab{
+        font-size: 8px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    *{
+        overflow-x: hidden;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostra o botão */
+    }
+
+    .menu-toggle img {
+        width: 24px; /* Ajuste o tamanho do ícone */
+        height: 24px;
+    }
+
+    .sidebar {
+        transform: translateX(-100%); /* Esconde a sidebar inicialmente */
+    }
+
+    .sidebar.hidden {
+        transform: translateX(-100%); /* Garantia de esconder */
+    }
+
+    .sidebar:not(.hidden) {
+        transform: translateX(0); /* Mostra a sidebar */
+    }
+    
+    .dashboard-container {
+        padding: 10px;
+        margin-left: 20px;
+    }
+
+    .sidebar {
+        width: 60%;
+        height: 100%;
+        position: fixed;
+        margin: 0 auto;
+        justify-items: center;
+        padding: 0;
+    }
+
+    .dashboard-container{
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-items: center;
+        margin: 0 auto;
+    }
+
+    .footer-logo{
+        width: 120px;
+        position: relative;
+    }
+
+    .menu {
+        flex-direction: column;
+        justify-items: center;
+        width: 170%;
+        display: block;
+    }
+
+    .menu a{
+        font-size: 0.8rem;
+    }
+
+    .user-details p{
+        font-size: 0.7rem;
+    }
+
+    .user-info{
+        margin: 0;
+        margin-top: 70px;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    
+
+    .dashboard-top,
+    .dashboard-charts,
+    .dashboard-generation {
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    .card,
+    .card-economia,
+    .info-card,
+    .card-tempo,
+    .generation-card {
+        margin: 0;
+        margin-bottom: 15px;
+        width: 220px;
+        height: 400px;
+    }
+
+    .card{
+        margin-top: 20px;
+    }
+    
+    .texto-economia p,
+    .card-tempo p{
+        margin: 0;
+    }
+
+    .dashboard-charts{
+        margin: 0 auto;
+        display: block;
+        justify-items: center;
+    }
+
+    .titulo-grafico,
+    .titulo-grafico p{
+        margin: 0;
+        width: 0;
+        height: 0;
+        padding: 0;
+    }
+
+    .info-card{
+        display: block;
+        width: 700px;
+        margin-bottom: 30px;
+        height: auto;
+    }
+
+    #realTimeChart{
+        margin: 0;
+    }
+
+    .info-card-porcentagem{
+        width: 220px;
+        margin-bottom: 30px;
+        height: 200px;
+    }
+    
+    .grafico{
+        margin: 0 auto;
+        margin-left: 0px;
+        height: 400px;
+    }
+
+    .gaugeChart{
+        width: auto;
+        height: auto;
+    }
+
+    .dashboard-generation{
+        width: 300px;
+        display: block;
+        margin: 0 ;
+        align-items: center;
+        justify-items: center;
+        margin-bottom: 30px;
+    }
+
+    .linha-divisao::after{
+        margin: 0;
+        background-color: transparent;
+    }
+
+    .linha-divisao{
+        display: block;
+        border-bottom: 1.5px solid #ffffff;
+        border-radius: 0;
+    }
+
+    .generation-card{
+        display: block;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        height: 120px;
+    }
+    
+    .dashboard-alerts.active {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding-top: 10%;
+    }
+
+    .alerts-content,
+    .alerts-header{
+        margin-left: 3%;
+        margin-right: 4%;
+    }
+
+    .alert-info h3{
+        font-size: 1rem;
+    }
+
+    .alert-info p{
+        font-size: 0.8rem;
+        width: 90%;
+    }
+
+    .alert-date{
+        width: 40%;
+        font-size: 0.6rem;
+        color: rgb(255, 255, 255);
+        text-align: right;
+    }
+
+    .tab active,
+    .tab{
+        font-size: 0.8rem;
+    }
+
+    .settings-card{
+        display: block;
+        max-width: 100%;
+        align-items: center;
+        justify-items: center;
+        margin: 0;
+        padding: 0%;
+    }
+    .profile-photo{
+        align-items: center;
+        justify-items: center;
+        margin: 0;
+        padding: 0;
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+
+    #panelsQuantity,
+    #panelPower,
+    #installationType,
+    #installationCEP{
+        width: 95%;
+    }
+    
+    
+
+}
