@@ -1312,13 +1312,14 @@ canvas {
 
     .dashboard-charts{
         margin: 0 ;
-        display: block;
-        justify-items: center;
         align-items: center;
-        padding: 0;
-        gap: 0px;
+        justify-items: center;
+        margin-bottom: 30px;
         border: 1.5px solid #ffffff;
         width: 100%;
+        background-color: transparent;
+        border-radius: 0;
+        display: block;
     }
 
     .titulo-grafico,
@@ -1331,9 +1332,15 @@ canvas {
 
     .info-card{
         display: block;
-        width: 700px;
+        width: 300px;
+        margin: 0;
         margin-bottom: 30px;
         height: auto;
+        border: 1.5px solid #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
     }
 
     #realTimeChart{
@@ -1341,16 +1348,18 @@ canvas {
     }
 
     .info-card-porcentagem{
-        width: 220px;
+        margin: 0;
+        padding: 0;
+        width: 300px;
         margin-bottom: 30px;
         height: 200px;
+        padding-bottom: 20px; 
     }
     
     .grafico{
         margin: 0 auto;
         margin-left: 0px;
         height: 400px;
-        width: 220px;
     }
 
     .gaugeChart{
