@@ -1363,6 +1363,7 @@ canvas {
         margin-bottom: 30px;
         border: 1.5px solid #ffffff;
         max-width: 100%;
+        padding: 0%;
     }
 
     .linha-divisao::after{
