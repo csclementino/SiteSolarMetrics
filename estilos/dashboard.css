@@ -1272,13 +1272,12 @@ canvas {
         margin-right: 2%;
     }
 
-    .dashboard-top,
-    .dashboard-generation {
+    .dashboard-top {
         grid-template-columns: 1fr;
         align-items: center;
         justify-items: center;
         border: 1.5px solid #ffffff;
-        max-width: 300px;
+        max-width: 100%;
     }
 
     .dashboard-main{
@@ -1362,7 +1361,7 @@ canvas {
         align-items: center;
         justify-items: center;
         margin-bottom: 30px;
-        width: 100%;
+        border: 1.5px solid #ffffff;
     }
 
     .linha-divisao::after{
