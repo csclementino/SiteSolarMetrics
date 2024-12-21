@@ -1277,7 +1277,7 @@ canvas {
         align-items: center;
         justify-items: center;
         border: 1.5px solid #ffffff;
-        max-width: 100%;
+        width: 100%;
     }
 
     .dashboard-main{
@@ -1318,7 +1318,7 @@ canvas {
         padding: 0;
         gap: 0px;
         border: 1.5px solid #ffffff;
-        max-width: 100%;
+        width: 100%;
     }
 
     .titulo-grafico,
@@ -1350,6 +1350,7 @@ canvas {
         margin: 0 auto;
         margin-left: 0px;
         height: 400px;
+        width: 220px;
     }
 
     .gaugeChart{
@@ -1363,7 +1364,10 @@ canvas {
         justify-items: center;
         margin-bottom: 30px;
         border: 1.5px solid #ffffff;
-        max-width: 100%;
+        width: 100%;
+        background-color: transparent;
+        border-radius: 0;
+        display: block;
     }
 
     .linha-divisao::after{
@@ -1372,12 +1376,17 @@ canvas {
     }
 
     .linha-divisao{
-        display: block;
-        border-bottom: 1.5px solid #ffffff;
         border-radius: 0;
         align-items: center;
         justify-items: center;
-        width: auto;
+        width: 300px;
+        max-width: 100%;
+        background-color: #343333;
+        border-radius: 16px;
+        margin: 0;
+        padding: 0;
+        box-shadow: 14px 11px 4px rgba(0, 0, 0, 0.25);
+        margin-bottom: 20px;
     }
 
     .generation-card{
@@ -1388,7 +1397,15 @@ canvas {
         height: 120px;
         align-items: center;
         justify-items: center;
+    }
+
+    #linha-divisao{
+        height: auto;
+        box-shadow: 14px 11px 4px rgba(0, 0, 0, 0.25);
         width: 300px;
+        max-width: 100%;
+        background-color: #343333;
+        border-radius: 16px;
     }
     
     .dashboard-alerts.active {
