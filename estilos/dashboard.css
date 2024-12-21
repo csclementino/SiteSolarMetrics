@@ -1316,6 +1316,7 @@ canvas {
         align-items: center;
         padding: 0;
         gap: 0px;
+        margin-left: 20px;
     }
 
     .titulo-grafico,
@@ -1355,13 +1356,12 @@ canvas {
     }
 
     .dashboard-generation{
-        width: 300px;
-        display: block;
         margin: 0 ;
         align-items: center;
         justify-items: center;
         margin-bottom: 30px;
         border: 1.5px solid #ffffff;
+        width: 80%;
     }
 
     .linha-divisao::after{
