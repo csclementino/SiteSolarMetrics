@@ -1314,11 +1314,9 @@ canvas {
         justify-items: center;
         margin-bottom: 30px;
         width: 100%;
-        max-width: 100%;
         background-color: transparent;
         border-radius: 0;
         display: block;
-        padding: 0;
     }
 
     .titulo-grafico,
