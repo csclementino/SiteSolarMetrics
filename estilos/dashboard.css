@@ -1377,6 +1377,8 @@ canvas {
 
     #linha-divisao,
     .linha-divisao{
+        display: flex;
+        flex-direction: column;
         border-radius: 0;
         align-items: center;
         justify-items: center;
@@ -1395,13 +1397,16 @@ canvas {
         display: block;
         margin: 0;
         padding: 0;
-        text-align: center;
         height: 120px;
         align-items: center;
         justify-items: center;
     }
 
-   
+    .generation-card h4,
+    .generation-card h1{
+        text-align: center;
+        align-items: center;
+    }
     
     .dashboard-alerts.active {
         display: block;
