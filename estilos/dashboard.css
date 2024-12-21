@@ -1349,6 +1349,9 @@ canvas {
         margin: 0 auto;
         margin-left: 0px;
         height: 400px;
+        width: 300px;
+        align-items: center;
+        justify-items: center;
     }
 
     .gaugeChart{
@@ -1363,7 +1366,6 @@ canvas {
         margin-bottom: 30px;
         border: 1.5px solid #ffffff;
         max-width: 100%;
-        padding: 0%;
     }
 
     .linha-divisao::after{
