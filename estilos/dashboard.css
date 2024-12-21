@@ -1375,20 +1375,22 @@ canvas {
         background-color: transparent;
     }
 
+    #linha-divisao,
     .linha-divisao{
         border-radius: 0;
         align-items: center;
         justify-items: center;
         width: 300px;
         max-width: 100%;
-
+        background-color: #343333;
         border-radius: 16px;
-        margin: 0;
+        margin: 0 auto;
         padding: 0;
         box-shadow: 14px 11px 4px rgba(0, 0, 0, 0.25);
         margin-bottom: 20px;
     }
 
+    .linha-div,
     .generation-card{
         display: block;
         margin: 0;
@@ -1399,14 +1401,7 @@ canvas {
         justify-items: center;
     }
 
-    #linha-divisao{
-        height: auto;
-        box-shadow: 14px 11px 4px rgba(0, 0, 0, 0.25);
-        width: 300px;
-        max-width: 100%;
-        background-color: #343333;
-        border-radius: 16px;
-    }
+   
     
     .dashboard-alerts.active {
         display: block;
