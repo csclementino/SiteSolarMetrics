@@ -1271,7 +1271,6 @@ canvas {
         margin-left: 2%;
         margin-right: 2%;
     }
-    
 
     .dashboard-top,
     .dashboard-generation {
@@ -1279,6 +1278,7 @@ canvas {
         align-items: center;
         justify-items: center;
         border: 1.5px solid #ffffff;
+        max-width: 300px;
     }
 
     .dashboard-main{
@@ -1286,6 +1286,8 @@ canvas {
         justify-items: center;
         margin: 0;
         padding: 0;
+        width: 100%;
+        border: 1.5px solid #ffffff;
     }
 
     .card,
@@ -1315,7 +1317,6 @@ canvas {
         align-items: center;
         padding: 0;
         gap: 0px;
-
     }
 
     .titulo-grafico,
