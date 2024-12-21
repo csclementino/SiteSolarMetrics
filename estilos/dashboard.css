@@ -1319,7 +1319,6 @@ canvas {
         gap: 0px;
         border: 1.5px solid #ffffff;
         max-width: 100%;
-        flex-direction: column;
     }
 
     .titulo-grafico,
@@ -1378,6 +1377,7 @@ canvas {
         border-radius: 0;
         align-items: center;
         justify-items: center;
+        width: 100%;
     }
 
     .generation-card{
@@ -1388,7 +1388,7 @@ canvas {
         height: 120px;
         align-items: center;
         justify-items: center;
-        width: 100%;
+        width: 220px;
     }
     
     .dashboard-alerts.active {
