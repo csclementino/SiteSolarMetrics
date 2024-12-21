@@ -1320,6 +1320,7 @@ canvas {
         background-color: transparent;
         border-radius: 0;
         display: block;
+        padding: 0;
     }
 
     .titulo-grafico,
