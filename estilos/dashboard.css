@@ -1331,7 +1331,8 @@ canvas {
     }
 
     .info-card{
-        display: block;
+        display: flex;
+        flex-direction: column;
         width: 300px;
         margin: 0;
         margin-bottom: 30px;
