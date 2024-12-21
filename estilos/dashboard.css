@@ -1316,8 +1316,8 @@ canvas {
         align-items: center;
         padding: 0;
         gap: 0px;
-        width: 100%;
         border: 1.5px solid #ffffff;
+        max-width: 100%;
     }
 
     .titulo-grafico,
@@ -1362,7 +1362,7 @@ canvas {
         justify-items: center;
         margin-bottom: 30px;
         border: 1.5px solid #ffffff;
-        width: 80%;
+        max-width: 100%;
     }
 
     .linha-divisao::after{
