@@ -1319,6 +1319,7 @@ canvas {
         gap: 0px;
         border: 1.5px solid #ffffff;
         max-width: 100%;
+        flex-direction: column;
     }
 
     .titulo-grafico,
