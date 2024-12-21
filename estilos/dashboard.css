@@ -1274,10 +1274,17 @@ canvas {
     
 
     .dashboard-top,
-    .dashboard-charts,
     .dashboard-generation {
         grid-template-columns: 1fr;
         align-items: center;
+        justify-items: center;
+    }
+
+    .dashboard-main{
+        align-items: center;
+        justify-items: center;
+        margin: 0;
+        padding: 0;
     }
 
     .card,
@@ -1300,13 +1307,14 @@ canvas {
         margin: 0;
     }
 
-    #mainContent,
     .dashboard-charts{
         margin: 0 ;
         display: block;
         justify-items: center;
         align-items: center;
         padding: 0;
+        gap: 0px;
+
     }
 
     .titulo-grafico,
