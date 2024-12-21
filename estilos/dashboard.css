@@ -1377,7 +1377,7 @@ canvas {
         border-radius: 0;
         align-items: center;
         justify-items: center;
-        width: 100%;
+        width: auto;
     }
 
     .generation-card{
