@@ -1317,6 +1317,7 @@ canvas {
         margin-bottom: 30px;
         border: 1.5px solid #ffffff;
         width: 100%;
+        max-width: 100%;
         background-color: transparent;
         border-radius: 0;
         display: block;
