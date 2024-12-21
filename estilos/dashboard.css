@@ -1287,6 +1287,7 @@ canvas {
         padding: 0;
         width: 100%;
         border: 1.5px solid #ffffff;
+        display: block;
     }
 
     .card,
@@ -1349,9 +1350,6 @@ canvas {
         margin: 0 auto;
         margin-left: 0px;
         height: 400px;
-        width: 300px;
-        align-items: center;
-        justify-items: center;
     }
 
     .gaugeChart{
