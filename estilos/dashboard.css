@@ -1309,12 +1309,11 @@ canvas {
     }
 
     .dashboard-charts {
-        display: flex; /* Define o layout como flexbox */
+        display: block; /* Define o layout como flexbox */
         flex-direction: column; /* Organiza os itens em uma coluna */
         align-items: center; /* Centraliza os itens horizontalmente */
-        justify-content: center; /* Centraliza os itens verticalmente */
+        justify-items: center; /* Centraliza os itens verticalmente */
         margin: 0 auto; /* Centraliza o contêiner no centro da página horizontalmente */
-        gap: 10px; /* Espaçamento entre os itens */
         width: auto;
         height: auto; /* (Opcional) Pode limitar o tamanho ou permitir ocupação completa */
         padding: 0;
@@ -1337,7 +1336,7 @@ canvas {
         margin-bottom: 30px;
         height: auto;
         align-items: center;
-        justify-items: center;
+        justify-content: center;
     }
 
     #realTimeChart{
@@ -1349,7 +1348,7 @@ canvas {
         padding: 0;
         width: 300px;
         margin-bottom: 30px;
-        height: 200px;
+        max-height: 200px;
         padding-bottom: 20px; 
     }
     
@@ -1360,6 +1359,7 @@ canvas {
         padding: 0;
     }
 
+    .gaugePercentage,
     .gaugeChart{
         width: auto;
         height: auto;
