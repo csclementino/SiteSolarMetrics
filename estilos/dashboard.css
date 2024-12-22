@@ -1313,8 +1313,8 @@ canvas {
         flex-direction: column; /* Organiza os itens em uma coluna */
         align-items: center; /* Centraliza os itens horizontalmente */
         justify-content: center; /* Centraliza os itens verticalmente */
-        margin: 0 auto; /* Centraliza o contêiner no centro da página horizontalmente */
-        width: 300px;
+        margin: 0; /* Centraliza o contêiner no centro da página horizontalmente */
+        width: 100%;
         height: auto; /* (Opcional) Pode limitar o tamanho ou permitir ocupação completa */
         padding: 0;
         border: 2px solid white;
@@ -1332,7 +1332,6 @@ canvas {
         display: flex;
         flex-direction: column;
         width: 265px;
-        max-width: 100%;
         margin: 0;
         margin-bottom: 30px;
         height: auto;
