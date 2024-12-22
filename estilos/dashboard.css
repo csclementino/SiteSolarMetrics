@@ -1238,11 +1238,13 @@ canvas {
     }
 
     .dashboard-container{
-        width: 100%;
+        display: flex;
+        width: 100vh;
         height: auto;
         align-items: center;
-        justify-items: center;
+        justify-content: center;
         margin: 0 auto;
+        padding: 0;
     }
 
     .footer-logo{
@@ -1318,6 +1320,7 @@ canvas {
         background-color: transparent;
         border-radius: 0;
         display: block;
+        border: 2px solid white;
     }
 
     .titulo-grafico,
