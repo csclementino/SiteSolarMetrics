@@ -530,6 +530,7 @@ input:checked + .slider:before {
     font-weight: 400;
     font-size: 19px;
     color: #acacac;
+    height: auto;
 }
 
 .info-card-porcentagem{
