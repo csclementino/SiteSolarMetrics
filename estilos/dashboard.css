@@ -1238,7 +1238,7 @@ canvas {
     }
 
     .dashboard-container{
-        width: 100%;
+        width: 100vh;
         height: auto;
         align-items: center;
         justify-items: center;
@@ -1315,9 +1315,7 @@ canvas {
         justify-content: center; /* Centraliza os itens verticalmente */
         margin: 0; /* Centraliza o contêiner no centro da página horizontalmente */
         width: 100%;
-        height: auto; /* (Opcional) Pode limitar o tamanho ou permitir ocupação completa */
         padding: 0;
-        border: 2px solid white;
     }
 
     .titulo-grafico,
@@ -1348,8 +1346,12 @@ canvas {
         padding: 0;
         width: 300px;
         margin-bottom: 30px;
-        height: 200px;
-        padding-bottom: 20px; 
+        height: auto;
+        max-height: 100%;
+        padding-bottom: 20px;
+        display:block;
+        flex: none;
+        align-items: center;
     }
     
     .grafico{
@@ -1363,6 +1365,7 @@ canvas {
         width: auto;
         height: auto;
     }
+
 
     .dashboard-generation{
         margin: 0 ;
