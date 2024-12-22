@@ -1240,8 +1240,10 @@ canvas {
     .dashboard-container{
         width: 100%;
         height: auto;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-items: center;
+        justify-content: center;
         margin: 0 auto;
     }
 
@@ -1309,10 +1311,10 @@ canvas {
     }
 
     .dashboard-charts {
-        display: block; /* Define o layout como flexbox */
+        display: flex; /* Define o layout como flexbox */
         flex-direction: column; /* Organiza os itens em uma coluna */
         align-items: center; /* Centraliza os itens horizontalmente */
-        justify-items: center; /* Centraliza os itens verticalmente */
+        justify-content: center; /* Centraliza os itens verticalmente */
         margin: 0 auto; /* Centraliza o contêiner no centro da página horizontalmente */
         width: auto;
         height: auto; /* (Opcional) Pode limitar o tamanho ou permitir ocupação completa */
