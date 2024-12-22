@@ -1319,6 +1319,7 @@ canvas {
         border-radius: 0;
         display: block;
         border: 2px solid white;
+        margin-left: 20px;
     }
 
     .titulo-grafico,
