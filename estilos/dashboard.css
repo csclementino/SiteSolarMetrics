@@ -1308,18 +1308,15 @@ canvas {
         margin: 0;
     }
 
-    .dashboard-charts{
-        margin: 0 ;
-        margin-bottom: 30px;
-        width: auto;
-        height: auto;
-        background-color: transparent;
-        border-radius: 0;
-        display: flex;
-        justify-content: right;
-        align-content: right;
-        border: 2px solid white;
-        margin-left: 20px;
+    .dashboard-charts {
+        display: flex; /* Define o layout como flexbox */
+        flex-direction: column; /* Organiza os itens em uma coluna */
+        align-items: center; /* Centraliza os itens horizontalmente */
+        justify-content: center; /* Centraliza os itens verticalmente */
+        margin: 0 auto; /* Centraliza o contêiner no centro da página horizontalmente */
+        gap: 20px; /* Espaçamento entre os itens */
+        width: 100%; /* (Opcional) Pode limitar o tamanho ou permitir ocupação completa */
+        max-width: 600px; /* (Opcional) Limita a largura máxima */
     }
 
     .titulo-grafico,
