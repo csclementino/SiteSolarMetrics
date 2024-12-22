@@ -1348,7 +1348,7 @@ canvas {
         padding: 0;
         width: 300px;
         margin-bottom: 30px;
-        max-height: 200px;
+        height: 200px;
         padding-bottom: 20px; 
     }
     
@@ -1359,7 +1359,6 @@ canvas {
         padding: 0;
     }
 
-    .gaugePercentage,
     .gaugeChart{
         width: auto;
         height: auto;
