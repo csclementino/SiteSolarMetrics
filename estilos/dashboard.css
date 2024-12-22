@@ -1316,8 +1316,8 @@ canvas {
         background-color: transparent;
         border-radius: 0;
         display: flex;
-        justify-content: center;
-        align-content: center;
+        justify-content: right;
+        align-content: right;
         border: 2px solid white;
         margin-left: 20px;
     }
