@@ -518,6 +518,7 @@ input:checked + .slider:before {
     padding-right: 15px;
     border-radius: 16px;
     border: 1px solid #e1e417;
+    flex: 1;
 }
 
 .titulo-grafico{
