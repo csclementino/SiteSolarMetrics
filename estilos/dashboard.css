@@ -1372,6 +1372,10 @@ canvas {
         align-items: center;
     }
     
+    .info-card-porcentagem p {
+        font-size: 1.4rem;
+    }
+
     .gauge-container{
         padding-top: 280px;
         display: flex;
