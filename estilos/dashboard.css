@@ -1319,15 +1319,14 @@ canvas {
     }
 
     .dashboard-charts{
-        margin: 0 ;
+        margin: 0 auto;
         align-items: center;
         justify-items: center;
         margin-bottom: 30px;
-        max-width: 100%;
+        width: 100%;
         background-color: transparent;
         border-radius: 0;
-        display: flex;
-        flex-direction: column;
+        display: block;
     }
 
     .titulo-grafico,
@@ -1360,9 +1359,7 @@ canvas {
         width: 300px;
         margin-bottom: 30px;
         height: 200px;
-        padding-bottom: 20px;
-        align-items: center;
-        justify-items: center; 
+        padding-bottom: 20px; 
     }
     
     .grafico{
