@@ -1285,8 +1285,18 @@ canvas {
         margin: 0;
         padding: 0;
         width: 100%;
+    }
+
+    .dashboard-main,
+    .dashboard-settings {
+        display: none;
+    }
+
+    .dashboard-main.active,
+    .dashboard-settings.active {
         display: block;
     }
+
 
     .card,
     .card-economia,

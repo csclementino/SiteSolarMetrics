@@ -257,6 +257,11 @@ const gaugeChart = new Chart(document.getElementById("gaugeChart"), {
 // Menu Ativo
 document.addEventListener("DOMContentLoaded", () => {
     const menuItems = document.querySelectorAll(".menu-item");
+
+    // Configuração inicial para abrir o overview
+    document.getElementById("overview").classList.add("ativo");
+    document.getElementById("mainContent").classList.add("active");
+
     menuItems.forEach((item) => {
         item.addEventListener("click", () => {
             menuItems.forEach((el) => el.classList.remove("ativo"));
@@ -287,6 +292,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("mainContent").classList.add("active");
     });
 });
+
 
 // Função para calcular e atualizar o gráfico de Aproveitamento
 function updateGaugeChart() {
