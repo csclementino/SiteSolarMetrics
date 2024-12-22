@@ -1329,7 +1329,8 @@ canvas {
     .info-card{
         display: flex;
         flex-direction: column;
-        width: 265px;
+        width: 300px;
+        max-width: 270px;
         margin: 0;
         margin-bottom: 30px;
         height: auto;
