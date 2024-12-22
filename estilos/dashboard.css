@@ -1285,18 +1285,8 @@ canvas {
         margin: 0;
         padding: 0;
         width: 100%;
-    }
-
-    .dashboard-main,
-    .dashboard-settings {
-        display: none;
-    }
-
-    .dashboard-main.active,
-    .dashboard-settings.active {
         display: block;
     }
-
 
     .card,
     .card-economia,
@@ -1319,11 +1309,12 @@ canvas {
     }
 
     .dashboard-charts{
-        margin: 0 auto;
+        margin: 0 ;
         align-items: center;
         justify-items: center;
         margin-bottom: 30px;
-        width: 100%;
+        width: auto;
+        height: auto;
         background-color: transparent;
         border-radius: 0;
         display: block;
