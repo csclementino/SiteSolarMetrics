@@ -1314,7 +1314,7 @@ canvas {
         align-items: center; /* Centraliza os itens horizontalmente */
         justify-content: center; /* Centraliza os itens verticalmente */
         margin: 0 auto; /* Centraliza o contêiner no centro da página horizontalmente */
-        width: auto;
+        width: 300px;
         height: auto; /* (Opcional) Pode limitar o tamanho ou permitir ocupação completa */
         padding: 0;
     }
