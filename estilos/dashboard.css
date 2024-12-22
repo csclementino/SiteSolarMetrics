@@ -1314,9 +1314,10 @@ canvas {
         align-items: center; /* Centraliza os itens horizontalmente */
         justify-content: center; /* Centraliza os itens verticalmente */
         margin: 0 auto; /* Centraliza o contêiner no centro da página horizontalmente */
-        gap: 20px; /* Espaçamento entre os itens */
+        gap: 10px; /* Espaçamento entre os itens */
         width: auto;
         height: auto; /* (Opcional) Pode limitar o tamanho ou permitir ocupação completa */
+        padding: 0;
     }
 
     .titulo-grafico,
