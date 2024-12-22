@@ -1,3 +1,23 @@
+@font-face {
+    font-family: 'LFT Etica';
+    src: url('../fonts/lftetica-bold.ttf') format('opentype');
+}
+@font-face {
+    font-family: 'Kanit';
+    src: url('../fonts/Kanit-Regular.ttf') format('opentype');
+}
+@font-face {
+    font-family: 'DejaRip';
+    src: url('../fonts/fonnts.com-DejaRip_Bold.otf') format('opentype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'DejaRip';
+    src: url('../fonts/fonnts.com-DejaRip.otf') format('opentype');
+    font-weight: normal;
+}
+
 /* Estilos Gerais */
 body {
     font-family: Arial, sans-serif;
