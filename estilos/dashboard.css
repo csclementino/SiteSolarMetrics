@@ -1323,10 +1323,11 @@ canvas {
         align-items: center;
         justify-items: center;
         margin-bottom: 30px;
-        width: 100%;
+        max-width: 100%;
         background-color: transparent;
         border-radius: 0;
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
 
     .titulo-grafico,
@@ -1335,7 +1336,6 @@ canvas {
         width: 0;
         height: 0;
         padding: 0;
-
     }
 
     .info-card{
@@ -1360,7 +1360,9 @@ canvas {
         width: 300px;
         margin-bottom: 30px;
         height: 200px;
-        padding-bottom: 20px; 
+        padding-bottom: 20px;
+        align-items: center;
+        justify-items: center; 
     }
     
     .grafico{

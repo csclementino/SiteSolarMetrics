@@ -34,12 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
         settings: document.getElementById("settingsSection"),
     };
 
-            const initialMenuItem = document.getElementById("overview");
-            initialMenuItem.classList.add("ativo");
-            const initialIcon = initialMenuItem.querySelector("img");
-            if (initialIcon) {
-                initialIcon.src = initialIcon.dataset.activeIcon; // Ícone ativo (preto) ao carregar
-            }
+    const initialMenuItem = document.getElementById("overview");
+    initialMenuItem.classList.add("ativo");
+    const initialIcon = initialMenuItem.querySelector("img");
+    if (initialIcon) {
+        initialIcon.src = initialIcon.dataset.activeIcon; // Ícone ativo (preto) ao carregar
+    }
 
     menuItems.forEach((item) => {
         item.addEventListener("click", () => {
