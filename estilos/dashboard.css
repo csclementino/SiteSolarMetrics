@@ -1317,6 +1317,7 @@ canvas {
         width: 300px;
         height: auto; /* (Opcional) Pode limitar o tamanho ou permitir ocupação completa */
         padding: 0;
+        border: 2px solid white;
     }
 
     .titulo-grafico,
