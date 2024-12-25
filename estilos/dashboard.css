@@ -333,8 +333,13 @@ body {
 }
 
 .titulo-grafico{
+    display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
+    background-color: yellow;
+    height: 100%;
+    width: 140%;
+    text-align: center;
 }
 
 .chart {
@@ -535,23 +540,26 @@ input:checked + .slider:before {
     gap: 20px; /* Espaçamento entre as colunas */
     box-shadow: 14px 11px 4px rgba(0, 0, 0, 0.25);
     height: 340px;
-    align-items: center;
-    padding-right: 15px;
+    padding-right: 20px;
     border-radius: 16px;
-    border: 1px solid #e1e417;
+    align-items: center;
+    justify-items: center;
+    background-color: #343333;
+    
 }
 
-.titulo-grafico{
-    margin-left: 20px;
+.titulo-grafico p{
+    margin-left: 15px;
     text-align: center;
-    justify-content: center;
-    font-family: 'DejaRip';
-    font-style: bold;
+    font-family: 'Londrina Solid';
+    font-style: normal;
     font-weight: 400;
-    font-size: 19px;
-    color: #acacac;
+    font-size: 22px;
+    color: #000000;
 }
-
+.grafico{
+    width: 100%;
+}
 .info-card-porcentagem{
     flex: 1;
     background-color: #343333;
@@ -619,8 +627,9 @@ canvas {
     bottom: 10px; /* Distância da parte inferior */
     left: 50%; /* Alinha no centro horizontal */
     transform: translateX(-50%); /* Ajusta o centro exato */
-    font-size: 20px;
-    font-weight: bold;
+    font-family: 'Londrina Solid';
+    font-size: 26px;
+    font-weight: normal;
     color: #fff;
 }
 
@@ -1249,7 +1258,7 @@ canvas {
     .sidebar {
         width: 60%;
         height: 100%;
-        position: fixed;
+        position:fixed;
         margin: 0 auto;
         justify-items: center;
         padding: 0;
@@ -1373,7 +1382,8 @@ canvas {
     }
     
     .info-card-porcentagem p {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+
     }
 
     .gauge-container{
@@ -1397,7 +1407,6 @@ canvas {
         width: auto;
         height: auto;
     }
-
 
     .dashboard-generation{
         margin: 0 ;
